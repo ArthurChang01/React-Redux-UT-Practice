@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
 import AppComponent from './AppComponent';
-import {HomeComponent, AboutComponent, ContactComponent} from './Content';
+import {HomeComponent, AboutComponent, ContactComponent} from './content';
 
 ReactDOM.render(
     <Router history={browserHistory}>
