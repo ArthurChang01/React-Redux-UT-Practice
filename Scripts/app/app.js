@@ -4,6 +4,7 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
 import AppComponent from './AppComponent';
 import {HomeComponent, AboutComponent, ContactComponent} from './content';
+import {LoginComponent, RegisterComponent} from './login';
 
 ReactDOM.render(
     <Router history={browserHistory}>
@@ -11,6 +12,8 @@ ReactDOM.render(
             <IndexRoute component={HomeComponent} />
             <Route path="about" component={AboutComponent} />
             <Route path="contact" component={ContactComponent} />
+            <Route path="login" component={LoginComponent} />
+            <Route path="register" component={RegisterComponent} />
         </Route>
     </Router>,
     document.getElementById('mount'));
