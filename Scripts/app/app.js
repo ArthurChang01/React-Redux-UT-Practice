@@ -1,16 +1,17 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
-import {HeaderComponent, ContentComponent, FooterComponent} from './layout';
+import AppComponent from './AppComponent';
+import {HomeComponent, AboutComponent, ContactComponent} from './Content';
 
 ReactDOM.render(
-    <div>
-        <HeaderComponent />
-        <div className="container body-content">
-            <ContentComponent />
-            <hr />
-            <FooterComponent />
-        </div>
-    </div>,
+    <Router history={browserHistory}>
+        <Route path="/" component={AppComponent}>
+            <IndexRoute component={HomeComponent} />
+            <Route path="about" component={AboutComponent} />
+            <Route path="contact" component={ContactComponent} />
+        </Route>
+    </Router>,
     document.getElementById('mount'));
 

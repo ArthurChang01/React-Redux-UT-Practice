@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-export default class ContentComponent extends React.Component {
-    render() {
+export default class HomeComponent extends React.Component {
+    render(){
         return <div>
             <div className="jumbotron">
                 <h1>ASP.NET</h1>
@@ -30,6 +30,6 @@ export default class ContentComponent extends React.Component {
                     <p><a className="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo; </a></p>
                 </div>
             </div>
-        </div>;
+        </div>; 
     }
 }

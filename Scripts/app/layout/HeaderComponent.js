@@ -15,13 +15,13 @@ export default class HeaderComponent extends React.Component {
                 </div>
                 <div className="navbar-collapse collapse">
                     <ul className="nav navbar-nav">
-                        <li> <a href="#">首頁</a> </li>
-                        <li> <a href="#">關於</a> </li>
-                        <li> <a href="#">連絡方式</a> </li>
+                        <li> <Link to="/">首頁</Link> </li>
+                        <li> <Link to="/about">關於</Link> </li>
+                        <li> <Link to="/contact">連絡方式</Link> </li>
                     </ul>
                     <ul className="nav navbar-nav navbar-right">
-                        <li><a href="#" id="registerLink">註冊</a></li>
-                        <li><a href="#" id="loginLink">登入</a></li>
+                        <li><Link to="/register">註冊</Link></li>
+                        <li><Link to="/login">登入</Link></li>
                     </ul>
                 </div>
             </div>
