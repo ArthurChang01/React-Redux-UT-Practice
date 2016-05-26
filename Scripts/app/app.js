@@ -6,8 +6,11 @@ import {HeaderComponent, ContentComponent, FooterComponent} from './layout';
 ReactDOM.render(
     <div>
         <HeaderComponent />
-        <ContentComponent />
-        <FooterComponent />
+        <div className="container body-content">
+            <ContentComponent />
+            <hr />
+            <FooterComponent />
+        </div>
     </div>,
     document.getElementById('mount'));
 

@@ -1,6 +1,6 @@
-import HeaderComponent from './header';
-import ContentComponent from './content';
-import FooterComponent from './footer';
+import HeaderComponent from './HeaderComponent';
+import ContentComponent from './ContentComponent';
+import FooterComponent from './FooterComponent';
 
 module.exports = {
     HeaderComponent,

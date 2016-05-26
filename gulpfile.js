@@ -5,15 +5,18 @@ var webpackConfig = require('./webpack.config.js');
 
 var path = {
     nodeRoot : './node_modules/',
-    webroot : './Scripts/'
+    JsRoot : './Scripts/',
+    CssRoot : './CSS/',
+    FontRoot : './fonts/'
 };
 
-gulp.task('moveFiles',function(){
+gulp.task('moveJsFiles',function(){
     return gulp.src([
         path.nodeRoot + 'es5-shim/*.js',
         path.nodeRoot + 'object-assign/index.js',
         path.nodeRoot + 'isomorphic-fetch/*.js',
         path.nodeRoot + 'jquery/dist/*.js',
+        path.nodeRoot + 'bootstrap/dist/js/bootstrap.js',
         path.nodeRoot + 'react/dist/*.js',
         path.nodeRoot + 'react-dom/dist/*.js',
         path.nodeRoot + 'react-redux/dist/*.js',
@@ -21,7 +24,23 @@ gulp.task('moveFiles',function(){
         path.nodeRoot + 'redux/dist/*.js',
         path.nodeRoot + 'redux-thunk/dist/*.js'
     ],{base:path.nodeRoot})
-    .pipe(gulp.dest(path.webroot+'vendors/'));
+    .pipe(gulp.dest(path.JsRoot+'vendors/'));
+});
+
+gulp.task('moveCssFiles',function(){
+    return gulp.src([
+        path.nodeRoot + 'bootstrap/dist/css/bootstrap.css',
+        path.nodeRoot + 'font-awesome/css/font-awesome.css'
+    ],{base:path.nodeRoot})
+    .pipe(gulp.dest(path.CssRoot));
+});
+
+gulp.task('moveFontsFiles',function(){
+    return gulp.src([
+        path.nodeRoot + 'bootstrap/dist/fonts/*.{eot,svg,ttf,woff,woff2}',
+        path.nodeRoot + 'font-awesome/fonts/*.{otf,eot,svg,ttf,woff,woff2}'
+    ],{base:path.nodeRoot})
+    .pipe(gulp.dest(path.FontRoot));
 });
 
 gulp.task("compile:js", function (callback) {
