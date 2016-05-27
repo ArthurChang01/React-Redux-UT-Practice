@@ -7,13 +7,12 @@ export default class LoginStateComponent extends React.Component {
     }
     
     render(){
-        console.log(this.props.isAuth);
         let rightSide = this.props.isAuth ?
         (
             <form id="logoutForm" className="navbar-right">
                 <ul className="nav navbar-nav navbar-right">
                     <li><a title="Manage">Hello {this.props.name}!</a></li>
-                    <li><a href="#" onClick={this.props.LogOut()}>登出</a></li>
+                    <li><a onClick={this.props.LogOut}>登出</a></li>
                 </ul>
             </form>
         ) :
