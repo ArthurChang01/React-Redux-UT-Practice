@@ -11,7 +11,7 @@ export default class LoginComponent extends React.Component {
                         <form method="post" className="form-horizontal" role="form" novalidate="novalidate">
                             <h4>使用本機帳戶登入。</h4>
                             <hr />
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label htmlFor="email" className="col-md-2 control-label">電子郵件</label>
                                 <div className="col-md-10">
                                     <input type="email" name="email" className="form-control" />

@@ -16,13 +16,13 @@ export default class RegisterComponent extends React.Component {
                                     <input type="email" className="form-control" />
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label className="col-md-2 control-label">密碼</label>
                                 <div className="col-md-10">
                                     <input type="password" className="form-control" />
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label className="col-md-2 control-label">確認密碼</label>
                                 <div className="col-md-10">
                                     <input type="password" className="form-control" />
