@@ -1,7 +1,15 @@
 import * as React from 'react';
-import {Link} from 'react-router';
+import {connect} from 'react-redux';
+import {Link, browserHistory} from 'react-router';
 
-export default class LoginComponent extends React.Component {
+import {LoginAction} from './actionCreators/LoginAction';
+
+
+export class LoginComponent extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    
     render() {
         return <div className="container body-content">
             <h2> 登入.</h2>
@@ -14,13 +22,13 @@ export default class LoginComponent extends React.Component {
                             <div className="form-group">
                                 <label htmlFor="email" className="col-md-2 control-label">電子郵件</label>
                                 <div className="col-md-10">
-                                    <input type="email" name="email" className="form-control" />
+                                    <input type="email" name="email" className="form-control" ref="email" />
                                 </div>
                             </div>
                             <div className="form-group">
                                 <label className="col-md-2 control-label">密碼</label>
                                 <div className="col-md-10">
-                                    <input type="password" className="form-control" />
+                                    <input type="password" className="form-control" ref="password" />
                                 </div>
                             </div>
                             <div className="form-group">
@@ -33,7 +41,7 @@ export default class LoginComponent extends React.Component {
                             </div>
                             <div className="form-group">
                                 <div className="col-md-offset-2 col-md-10">
-                                    <input type="submit" value="登入" className="btn btn-default" />
+                                    <input type="button" value="登入" className="btn btn-default" onClick={()=>this.props.onSubmit(this.refs.email.value, this.refs.password.value)} />
                                 </div>
                             </div>
                             <p>
@@ -47,3 +55,20 @@ export default class LoginComponent extends React.Component {
         </div>;
     }
 }
+
+const mapStateToProps = () => {
+    return {
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSubmit: (email, password) => { 
+            dispatch(LoginAction(email, password));
+            browserHistory.push('/');
+        }
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginComponent);
+

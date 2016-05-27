@@ -3,7 +3,7 @@ import * as React from 'react';
 export default class RegisterComponent extends React.Component {
     render() {
         return <div>
-            <h2> 登入.</h2>
+            <h2> 註冊.</h2>
             <div className="row">
                 <div className="col-md-8">
                     <section id="loginForm">
