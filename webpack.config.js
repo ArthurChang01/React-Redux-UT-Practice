@@ -17,7 +17,10 @@ var config = {
             {
                 test: /\.js$/,
                 include: path.join(__dirname, 'Scripts/app'),
-                loader: 'babel-loader'
+                loader: 'babel',
+                query:{
+                    presets:["es2015", "react","stage-0"]
+                }
             },
             {
                 test: /\.css$/,

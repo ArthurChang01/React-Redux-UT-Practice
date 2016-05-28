@@ -2,8 +2,9 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 import {Link,browserHistory} from 'react-router';
 
-import LoginStateComponent from '../login/LoginState/LoginStateComponent';
-import {LogOutAction} from '../login/LoginState/actionCreators/LogOutAction';
+import LoginStateComponent from '../login/components/LoginStateComponent';
+import {LogOutAction} from '../login/actionCreators/LogOutAction';
+import {LOGOUT} from '../login/constants/LoginConstant';
 
 export const HeaderComponent = (Props) => {
     return <div className="navbar navbar-inverse navbar-fixed-top">
@@ -29,16 +30,16 @@ export const HeaderComponent = (Props) => {
 };
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
-        isAuth : state.LoginReducer.isAuth || state.LogOutReducer.isAuth,
-        name : state.LoginReducer.name
+        isAuth : state.isAuth,
+        name : state.name
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         LogOut : ()=>{
+            console.log("LogOut is called");
             dispatch(LogOutAction());
             browserHistory.push('/');
         }

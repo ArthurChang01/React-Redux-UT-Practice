@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {HeaderComponent, FooterComponent} from './layout';
 
-export default class AppComponent extends React.Component {
+export default class LayoutComponent extends React.Component {
     render() {
         return <div>
             <HeaderComponent />

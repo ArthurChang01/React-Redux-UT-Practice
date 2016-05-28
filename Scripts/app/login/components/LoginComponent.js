@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
 import {Link, browserHistory} from 'react-router';
-
-import {LoginAction} from './actionCreators/LoginAction';
-
-
+ 
+import {LoginAction} from '../actionCreators/LoginAction';
+import {LOGIN} from '../constants/LoginConstant';
+ 
 export class LoginComponent extends React.Component {
     constructor(props){
         super(props);

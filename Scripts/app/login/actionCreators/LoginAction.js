@@ -6,4 +6,4 @@ export function LoginAction(email, password){
         email,
         password
     };
-}
+} 

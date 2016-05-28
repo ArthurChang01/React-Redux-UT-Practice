@@ -1,4 +1,7 @@
-import LoginComponent from './Login/LoginComponent';
-import RegisterComponent from './Register/RegisterComponent';
+import LoginComponent from './components/LoginComponent';
+import RegisterComponent from './components/RegisterComponent';
 
-module.exports = {LoginComponent, RegisterComponent};
+module.exports = {
+    LoginComponent,
+    RegisterComponent
+};

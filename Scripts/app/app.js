@@ -4,31 +4,25 @@ import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
-import AppComponent from './AppComponent';
+import LayoutComponent from './LayoutComponent';
 import {HomeComponent, AboutComponent, ContactComponent} from './content';
 import {LoginComponent, RegisterComponent} from './login';
 
-import {LoginReducer} from './login/Login/reducers/LoginReducer';
-import {LogOutReducer} from './login/LoginState/reducers/LogOutReducer';
+import {LoginReducer} from './login/reducers/LoginReducer';
 
-let store = createStore(
-    combineReducers({
-        LoginReducer: LoginReducer,
-        LogOutReducer: LogOutReducer
-    })
-);
+let store = createStore(LoginReducer);
 
 ReactDOM.render(
     <Provider store={store}>
         <Router history={browserHistory}>
-            <Route path="/" component={AppComponent}>
+            <Route path="/" component={LayoutComponent}>
                 <IndexRoute component={HomeComponent} />
                 <Route path="about" component={AboutComponent} />
                 <Route path="contact" component={ContactComponent} />
                 <Route path="login" component={LoginComponent} />
                 <Route path="register" component={RegisterComponent} />
             </Route>
-        </Router>
+        </Router> 
     </Provider>,
     document.getElementById('mount'));
 
