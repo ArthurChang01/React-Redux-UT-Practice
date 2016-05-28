@@ -39,7 +39,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         LogOut : ()=>{
-            console.log("LogOut is called");
             dispatch(LogOutAction());
             browserHistory.push('/');
         }
