@@ -1,4 +1,4 @@
-import {LOGOUT} from '../constants/LoginConstant';
+import {LOGOUT} from '../../constants/LoginConstant';
 
 export function LogOutAction(){
     return {

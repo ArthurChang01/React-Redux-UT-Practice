@@ -1,11 +1,12 @@
 const InitState = {
     isAuth:false,
-    name:'Arthur',
+    isFetching:false,
+    error_message:'',
     Members:[
     {
         Id:1,
         email:'a@b.c',
-        password:'1234'
+        password:'P@ssw0rd'
     }]
 };
 

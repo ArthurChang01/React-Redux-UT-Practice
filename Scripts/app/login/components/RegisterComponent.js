@@ -2,8 +2,8 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
  
-import {RegisterAction} from '../actionCreators/RegisterAction';
-import {LoginAction} from '../actionCreators/LoginAction';
+import {RegisterAsyncAction} from '../actionCreators/Register/RegisterAsyncAction';
+import {LoginAsyncAction} from '../actionCreators/Login/LoginAsyncAction';
 
 export class RegisterComponent extends React.Component {
     constructor(Props){
@@ -64,8 +64,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onSubmit : (email, password, confirm_password)=>{
-            dispatch(RegisterAction(email, password, confirm_password));
-            dispatch(LoginAction(email, password));
+            dispatch(RegisterAsyncAction(email, password, confirm_password));
+            dispatch(LoginAsyncAction(email, password));
             browserHistory.push('/');
         }
     };

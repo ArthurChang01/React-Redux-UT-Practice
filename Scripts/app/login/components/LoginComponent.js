@@ -2,7 +2,7 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 import {Link, browserHistory} from 'react-router';
  
-import {LoginAction} from '../actionCreators/LoginAction';
+import {LoginAsyncAction} from '../actionCreators/Login/LoginAsyncAction';
  
 export class LoginComponent extends React.Component {
     constructor(props){
@@ -63,7 +63,7 @@ const mapStateToProps = () => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onSubmit: (email, password) => { 
-            dispatch(LoginAction(email, password));
+            dispatch(LoginAsyncAction(email, password));
             browserHistory.push('/');
         }
     };
