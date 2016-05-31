@@ -1,6 +1,7 @@
-import React,{Component} from 'react';
+import React,{Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 
+//Component: LoginStateComponent
 export default class LoginStateComponent extends Component {
     constructor(props){
         super(props);
@@ -26,3 +27,10 @@ export default class LoginStateComponent extends Component {
         return rightSide;
     }
 }
+
+//LoginStateComponent's props define
+LoginStateComponent.propTypes={
+    isAuth: PropTypes.bool.isRequired,
+    name: PropTypes.string,
+    LogOut : PropTypes.func
+};

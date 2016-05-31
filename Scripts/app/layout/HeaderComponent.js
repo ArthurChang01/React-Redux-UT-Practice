@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React,{Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
 
@@ -6,6 +6,7 @@ import LoginStateComponent from '../login/components/LoginStateComponent';
 import {LogOutAction} from '../login/actionCreators/Logout/LogOutAction';
 import {LOGOUT} from '../login/constants/LoginConstant';
 
+//Component: HeaderComponent
 export class HeaderComponent extends Component {
     constructor(Props){
         super(Props);
@@ -35,6 +36,13 @@ export class HeaderComponent extends Component {
     }
 };
 
+//HeaderComponent's props define
+HeaderComponent.propTypes={
+    isAuth: PropTypes.bool.isRequired,
+    LogOut : PropTypes.func.isRequired
+};
+
+//for connect
 const mapStateToProps = (state) => {
     return {
         isAuth: state? state.isAuth : false,
@@ -42,6 +50,7 @@ const mapStateToProps = (state) => {
     };
 };
 
+//for connect
 const mapDispatchToProps = (dispatch) => {
     return {
         LogOut: () => {
@@ -50,4 +59,5 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
+//connect
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderComponent);

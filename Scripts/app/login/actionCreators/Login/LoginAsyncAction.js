@@ -1,5 +1,3 @@
-import {browserHistory} from 'react-router';
-
 import {LoginRequestAction} from './LoginRequestAction';
 import {LoginSuccessAction} from './LoginSuccessAction';
 import {LoginFailAction} from './LoginFailAction';
@@ -17,11 +15,9 @@ export function LoginAsyncAction(email, password) {
             .then(resp => resp.json())
             .then(data => {
                 if(data.length==0)
-                    dispatch(LoginFailAction('fail'));
-                else {
+                    dispatch(LoginFailAction('email or password is not matched'));
+                else 
                     dispatch(LoginSuccessAction(data));
-                    browserHistory.push('/');
-                }
             })
             .catch(err => {
                 dispatch(LoginFailAction(err));

@@ -1,19 +1,21 @@
-import React,{Component} from 'react';
+import React,{Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
  
 import {RegisterAsyncAction} from '../actionCreators/Register/RegisterAsyncAction';
 import {LoginAsyncAction} from '../actionCreators/Login/LoginAsyncAction';
 
+//Component: RegisterComponent
 export class RegisterComponent extends Component {
     constructor(Props){
         super(Props);
+        this.onSubmit=this._onSubmit.bind(this);
     }
     
     _onSubmit(){
         let email = this.refs.email.value,
             password = this.refs.password.value,
             confirm_password = this.refs.confirm_password.value;
-        let test = $(this.refs.email);
+
         this.props.onSubmit(email, password, confirm_password);
     }
     
@@ -46,7 +48,7 @@ export class RegisterComponent extends Component {
                             </div>
                             <div className="form-group">
                                 <div className="col-md-offset-2 col-md-10">
-                                    <input type="submit" value="註冊" className="btn btn-default" onClick={this._onSubmit.bind(this)} />
+                                    <input type="submit" value="註冊" className="btn btn-default" onClick={this.onSubmit} />
                                 </div>
                             </div>
                         </form>
@@ -57,17 +59,24 @@ export class RegisterComponent extends Component {
     }
 }
 
+//RegisterComponent'prop define
+RegisterComponent.propTypes={
+    onSubmit : PropTypes.func.isRequired
+};
+
+//for connect
 const mapStateToProps = (state) => {
     return {};
 };
 
+//for connect
 const mapDispatchToProps = (dispatch) => {
     return {
         onSubmit : (email, password, confirm_password)=>{
             dispatch(RegisterAsyncAction(email, password, confirm_password));
-            dispatch(LoginAsyncAction(email, password));
         }
     };
 };
 
+//connect
 export default connect(mapStateToProps,mapDispatchToProps)(RegisterComponent);

@@ -34,6 +34,11 @@
       "email": "b@.c.d",
       "password": "P@ssw0rd",
       "id": 7
+    },
+    {
+      "email": "b@.c.d",
+      "password": "P@ssw0rd",
+      "id": 8
     }
   ]
 }

@@ -1,12 +1,20 @@
-import React,{Component} from 'react';
+import React,{Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
  
 import {LoginAsyncAction} from '../actionCreators/Login/LoginAsyncAction';
  
+ //Component: LoginComponent
 export class LoginComponent extends Component {
     constructor(props){
         super(props);
+        this.onSubmit = this._onSubmit.bind(this);
+    }
+    
+    _onSubmit(){
+        let email = this.refs.email.value,
+            password = this.refs.password.value;
+        this.props.onSubmit(email,password);
     }
     
     render() {
@@ -40,7 +48,7 @@ export class LoginComponent extends Component {
                             </div>
                             <div className="form-group">
                                 <div className="col-md-offset-2 col-md-10">
-                                    <input type="button" value="登入" className="btn btn-default" onClick={()=>this.props.onSubmit(this.refs.email.value, this.refs.password.value)} />
+                                    <input type="button" value="登入" disabled={this.props.isFetching} className="btn btn-default" onClick={this.onSubmit} />
                                 </div>
                             </div>
                             <p>
@@ -55,11 +63,19 @@ export class LoginComponent extends Component {
     }
 }
 
-const mapStateToProps = () => {
+//Component: LoginComponent's propTypes define
+LoginComponent.propTypes={
+    isFetching : PropTypes.bool.isRequired
+};
+
+//for connect
+const mapStateToProps = (state) => {
     return {
+        isFetching : state ? state.isFetching : false
     };
 };
 
+//for connect
 const mapDispatchToProps = (dispatch) => {
     return {
         onSubmit: (email, password) => { 
@@ -68,5 +84,6 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
+//connect
 export default connect(mapStateToProps, mapDispatchToProps)(LoginComponent);
 
