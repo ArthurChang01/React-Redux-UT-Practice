@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "json-server --watch db.json",
     "build": "webpack-dev-server --devtool eval --progress --colors --hot --content-base .",
-    "start": "node ./node_modules/concurrently/src/main.js --kill-others \"npm run server\" \"npm run build\""
+    "start": "node ./node_modules/concurrently/src/main.js --kill-others \"npm run server\" \"npm run build\"",
+    "deploy": "webpack -p --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -40,6 +41,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "concurrently": "^2.1.0",
     "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "gulp": "^3.9.1",
     "gulp-util": "^3.0.7",

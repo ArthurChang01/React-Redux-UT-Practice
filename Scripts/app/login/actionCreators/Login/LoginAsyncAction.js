@@ -1,3 +1,5 @@
+import "es6-promise";
+import "fetch";
 import {LoginRequestAction} from './LoginRequestAction';
 import {LoginSuccessAction} from './LoginSuccessAction';
 import {LoginFailAction} from './LoginFailAction';

@@ -1,6 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
-var vendors_dir = path.join(__dirname,"/Scripts/vendors");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+var vendors_dir = path.join(__dirname, "/Scripts/vendors");
 
 var config = {
     entry: {
@@ -10,7 +12,7 @@ var config = {
             'babel-polyfill',
             './Scripts/app/app.js'
         ],
-        vendors:["es5-sham", "es5-shim", "fetch", "jquery", "bootstrap","react","react-dom","react-router", "redux", "redux-redux", "redux-thunk", "toastr"]
+        vendors: ["es5-sham", "es5-shim", "fetch", "jquery", "bootstrap", "react", "react-dom", "react-router", "redux", "redux-redux", "redux-thunk", "toastr"]
     },
     output: {
         path: 'build',
@@ -26,13 +28,11 @@ var config = {
                     presets: ["es2015", "react", "stage-0"]
                 }
             },
-            {
-                test: /\.css$/,
-                loaders: [
-                    'style?sourceMap',
-                    'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
-                ]
-            }
+            { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
+            { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
+            { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },
+            { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
+            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml' }
         ]
     },
     plugins: [
@@ -42,6 +42,13 @@ var config = {
             'window.jQuery': 'jquery'
         }),
         new webpack.optimize.CommonsChunkPlugin("vendors", "vendors.js"),
+        new ExtractTextPlugin("build.css"),
+        new webpack.IgnorePlugin(/vertx/),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        }),
         new webpack.NoErrorsPlugin()
     ],
     noParse: [
@@ -58,6 +65,7 @@ var config = {
 
 config.addVendor("es5-sham", vendors_dir + "/es5-shim/es5-sham.js");
 config.addVendor("es5-shim", vendors_dir + "/es5-shim/es5-shim.js");
+config.addVendor("es6-promise", vendors_dir + "/es6-promise/es6-promise.js");
 config.addVendor("fetch", vendors_dir + "/whatwg-fetch/fetch.js");
 config.addVendor("jquery", vendors_dir + "/jquery/jquery.js");
 config.addVendor("bootstrap", vendors_dir + "/bootstrap/bootstrap.js");

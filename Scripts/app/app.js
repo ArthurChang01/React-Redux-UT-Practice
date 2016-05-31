@@ -1,3 +1,8 @@
+require("../../CSS/bootstrap.css");
+require("../../CSS/font-awesome.css");
+require("../../CSS/toastr.css");
+require("../../CSS/main.css");
+
 import React from 'react';
 import {render} from 'react-dom';
 import {createStore, applyMiddleware } from 'redux';
