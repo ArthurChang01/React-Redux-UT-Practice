@@ -1,6 +1,3 @@
-import 'babel-polyfill';
-import 'es6-promise';
-import 'isomorphic-fetch';
 import {browserHistory} from 'react-router';
 
 import {LoginRequestAction} from './LoginRequestAction';

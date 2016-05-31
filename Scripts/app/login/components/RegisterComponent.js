@@ -1,11 +1,10 @@
-import * as React from 'react';
+import React,{Component} from 'react';
 import {connect} from 'react-redux';
-import {browserHistory} from 'react-router';
  
 import {RegisterAsyncAction} from '../actionCreators/Register/RegisterAsyncAction';
 import {LoginAsyncAction} from '../actionCreators/Login/LoginAsyncAction';
 
-export class RegisterComponent extends React.Component {
+export class RegisterComponent extends Component {
     constructor(Props){
         super(Props);
     }
@@ -14,6 +13,7 @@ export class RegisterComponent extends React.Component {
         let email = this.refs.email.value,
             password = this.refs.password.value,
             confirm_password = this.refs.confirm_password.value;
+        let test = $(this.refs.email);
         this.props.onSubmit(email, password, confirm_password);
     }
     
@@ -66,7 +66,6 @@ const mapDispatchToProps = (dispatch) => {
         onSubmit : (email, password, confirm_password)=>{
             dispatch(RegisterAsyncAction(email, password, confirm_password));
             dispatch(LoginAsyncAction(email, password));
-            browserHistory.push('/');
         }
     };
 };

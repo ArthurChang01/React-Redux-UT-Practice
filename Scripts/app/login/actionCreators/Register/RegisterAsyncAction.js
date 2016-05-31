@@ -1,6 +1,3 @@
-import 'babel-polyfill';
-import 'es6-promise';
-import 'isomorphic-fetch';
 import {LoginAsyncAction} from '../Login/LoginAsyncAction';
 import {RegisterRequestAction} from './RegisterRequestAction';
 import {RegisterSuccessAction} from './RegisterSuccessAction';

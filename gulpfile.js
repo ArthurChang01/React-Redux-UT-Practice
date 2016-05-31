@@ -14,7 +14,6 @@ gulp.task('moveJsFiles',function(){
     return gulp.src([
         path.nodeRoot + 'es5-shim/*.js',
         path.nodeRoot + 'object-assign/index.js',
-        path.nodeRoot + 'isomorphic-fetch/*.js',
         path.nodeRoot + 'jquery/dist/*.js',
         path.nodeRoot + 'bootstrap/dist/js/bootstrap.js',
         path.nodeRoot + 'react/dist/*.js',
@@ -22,7 +21,10 @@ gulp.task('moveJsFiles',function(){
         path.nodeRoot + 'react-redux/dist/*.js',
         path.nodeRoot + 'react-router/umd/*.js',
         path.nodeRoot + 'redux/dist/*.js',
-        path.nodeRoot + 'redux-thunk/dist/*.js'
+        path.nodeRoot + 'redux-thunk/dist/*.js',
+        path.nodeRoot + 'toastr/build/*.js',
+        path.nodeRoot + 'es6-promise/dist/*.js',
+        path.nodeRoot + 'whatwg-fetch/fetch.js',
     ],{base:path.nodeRoot})
     .pipe(gulp.dest(path.JsRoot+'vendors/'));
 });
@@ -30,7 +32,8 @@ gulp.task('moveJsFiles',function(){
 gulp.task('moveCssFiles',function(){
     return gulp.src([
         path.nodeRoot + 'bootstrap/dist/css/bootstrap.css',
-        path.nodeRoot + 'font-awesome/css/font-awesome.css'
+        path.nodeRoot + 'font-awesome/css/font-awesome.css',
+        path.nodeRoot + 'toastr/build/*.css'
     ],{base:path.nodeRoot})
     .pipe(gulp.dest(path.CssRoot));
 });

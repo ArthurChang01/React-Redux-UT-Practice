@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
 
@@ -6,7 +6,7 @@ import LoginStateComponent from '../login/components/LoginStateComponent';
 import {LogOutAction} from '../login/actionCreators/Logout/LogOutAction';
 import {LOGOUT} from '../login/constants/LoginConstant';
 
-export class HeaderComponent extends React.Component {
+export class HeaderComponent extends Component {
     constructor(Props){
         super(Props);
     }
@@ -20,7 +20,7 @@ export class HeaderComponent extends React.Component {
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
                     </button>
-                    <a className="navbar-brand">應用程式名稱</a>
+                    <Link className="navbar-brand" to="/">應用程式名稱</Link>
                 </div>
                 <div className="navbar-collapse collapse">
                     <ul className="nav navbar-nav">

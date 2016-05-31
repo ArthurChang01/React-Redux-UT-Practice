@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React,{Component} from 'react';
 import {Link} from 'react-router';
 
-export default class LoginStateComponent extends React.Component {
+export default class LoginStateComponent extends Component {
     constructor(props){
         super(props);
     }

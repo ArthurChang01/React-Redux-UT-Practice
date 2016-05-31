@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React,{Component} from 'react';
 import {connect} from 'react-redux';
-import {Link, browserHistory} from 'react-router';
+import {Link} from 'react-router';
  
 import {LoginAsyncAction} from '../actionCreators/Login/LoginAsyncAction';
  
-export class LoginComponent extends React.Component {
+export class LoginComponent extends Component {
     constructor(props){
         super(props);
     }
@@ -64,7 +64,6 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onSubmit: (email, password) => { 
             dispatch(LoginAsyncAction(email, password));
-            browserHistory.push('/');
         }
     };
 };
