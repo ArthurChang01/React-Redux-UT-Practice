@@ -3,6 +3,11 @@ require("../../CSS/font-awesome.css");
 require("../../CSS/toastr.css");
 require("../../CSS/main.css");
 
+import "babel-polyfill";
+import "es5-sham";
+import "es5-shim";
+import "es6-promise";
+
 import React from 'react';
 import {render} from 'react-dom';
 import {createStore, applyMiddleware } from 'redux';

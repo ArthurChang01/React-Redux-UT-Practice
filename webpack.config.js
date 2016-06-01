@@ -9,10 +9,11 @@ var config = {
         app: [
             'webpack-dev-server/client?http://localhost:8080',
             'webpack/hot/only-dev-server',
-            'babel-polyfill',
             './Scripts/app/app.js'
         ],
-        vendors: ["es5-sham", "es5-shim", "fetch", "jquery", "bootstrap", "react", "react-dom", "react-router", "redux", "redux-redux", "redux-thunk", "toastr"]
+        vendors: ["es5-sham", "es5-shim", "es6-promise", "fetch", "jquery", "jquery-valiation",
+            "bootstrap", "react", "react-dom", "react-router", "redux", "redux-redux", "redux-thunk",
+            "toastr"]
     },
     output: {
         path: 'build',
@@ -63,11 +64,13 @@ var config = {
     },
 };
 
+config.addVendor("babel-polyfill", vendors_dir + "/babel-polyfill/polyfill.js");
 config.addVendor("es5-sham", vendors_dir + "/es5-shim/es5-sham.js");
 config.addVendor("es5-shim", vendors_dir + "/es5-shim/es5-shim.js");
 config.addVendor("es6-promise", vendors_dir + "/es6-promise/es6-promise.js");
 config.addVendor("fetch", vendors_dir + "/whatwg-fetch/fetch.js");
 config.addVendor("jquery", vendors_dir + "/jquery/jquery.js");
+config.addVendor("jquery-valiation", vendors_dir + "/jquery-validation/jquery.validate.js");
 config.addVendor("bootstrap", vendors_dir + "/bootstrap/bootstrap.js");
 config.addVendor("react", vendors_dir + "/react/react.js");
 config.addVendor("react-dom", vendors_dir + "/react-dom/react-dom.js");

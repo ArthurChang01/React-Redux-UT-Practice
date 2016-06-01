@@ -25,7 +25,9 @@ gulp.task('moveJsFiles',function(){
         path.nodeRoot + 'toastr/build/*.js',
         path.nodeRoot + 'es6-promise/dist/*.js',
         path.nodeRoot + 'whatwg-fetch/fetch.js',
-        path.nodeRoot + 'babel-polyfill/dist/*.js'
+        path.nodeRoot + 'babel-polyfill/dist/*.js',
+        path.nodeRoot + 'jquery-validation/dist/*.js',
+        path.nodeRoot + 'jquery-validation-unobtrusive/jquery.validation.unobtrusive.js'
     ],{base:path.nodeRoot})
     .pipe(gulp.dest(path.JsRoot+'vendors/'));
 });

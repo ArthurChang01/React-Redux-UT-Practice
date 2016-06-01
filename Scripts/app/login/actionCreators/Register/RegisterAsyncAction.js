@@ -1,5 +1,6 @@
 import "es6-promise";
 import "fetch";
+import * as toastr from 'toastr';
 import {LoginAsyncAction} from '../Login/LoginAsyncAction';
 import {RegisterRequestAction} from './RegisterRequestAction';
 import {RegisterSuccessAction} from './RegisterSuccessAction';
@@ -9,6 +10,11 @@ export function RegisterAsyncAction(email, password, confirmed_password) {
     return dispatch => {
         if (password !== confirmed_password){
             dispatch(RegisterFailAction("password is not matched with confirmed_password"));
+            return;
+        }
+        
+        if (!email || !password || !confirmed_password){
+            toastr.error("email, password and confirmed_password can't be empty!");
             return;
         }
 

@@ -11,49 +11,19 @@
       "id": 2
     },
     {
-      "email": "b@.c.d",
-      "password": "P@ssw0rd",
+      "email": "",
+      "password": "",
       "id": 3
     },
     {
-      "email": "b@.c.d",
-      "password": "P@ssw0rd",
+      "email": "",
+      "password": "",
       "id": 4
     },
     {
       "email": "a@b.c",
       "password": "P@ssw0rd",
       "id": 5
-    },
-    {
-      "email": "b@.c.d",
-      "password": "P@ssw0rd",
-      "id": 6
-    },
-    {
-      "email": "b@.c.d",
-      "password": "P@ssw0rd",
-      "id": 7
-    },
-    {
-      "email": "b@.c.d",
-      "password": "P@ssw0rd",
-      "id": 8
-    },
-    {
-      "email": "a@b.c",
-      "password": "P@ssw0rd",
-      "id": 9
-    },
-    {
-      "email": "b@.c.d",
-      "password": "P@ssw0rd",
-      "id": 10
-    },
-    {
-      "email": "b@.c.d",
-      "password": "P@ssw0rd",
-      "id": 11
     }
   ]
 }

@@ -1,11 +1,17 @@
 import "es6-promise";
 import "fetch";
+import * as toastr from 'toastr';
 import {LoginRequestAction} from './LoginRequestAction';
 import {LoginSuccessAction} from './LoginSuccessAction';
 import {LoginFailAction} from './LoginFailAction';
 
 export function LoginAsyncAction(email, password) {
     return dispatch => {
+        if(!email || !password){
+            toastr.error("email or password can't be empty!");
+            return;
+        }
+
         dispatch(LoginRequestAction());
 
         let fetch_Parm = {
