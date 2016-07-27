@@ -1,21 +1,21 @@
 import "jquery-validation";
 
 const Validator = function Validator(rules, messages) {
-    if(!rules)
+    if (!rules)
         console.log("rules can't be empty!");
-    
+
     //validator's config
     let config = {
         rules: rules,
-        highlight: function (element) {
+        highlight: function(element) {
             $(element).closest('.form-group').addClass('has-error');
         },
-        unhighlight: function (element) {
+        unhighlight: function(element) {
             $(element).closest('.form-group').removeClass('has-error');
         },
         errorElement: 'span',
         errorClass: 'help-block',
-        errorPlacement: function (error, element) {
+        errorPlacement: function(error, element) {
             if (element.parent('.input-group').length) {
                 error.insertAfter(element.parent());
             } else {

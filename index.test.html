@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Unit Testing with Mocha and Chai</title>
+ 
+<!-- Mocha -->
+<link rel="stylesheet" href="Css/mocha/mocha.css">
+<script src="Scripts/vendors/mocha/mocha.js"></script>
+<script>mocha.setup('bdd'); //设置单元测试模式为BDD模式 </script>
+ 
+<!-- Chai -->
+<script src="Scripts/vendors/chai/chai.js"></script>
+<script>chai.Should(); </script> <!--  设置断言模式为 Should模式 -->
+ 
+</head>
+<body>
+ 
+<div id="mocha"></div>
+<!--  这里可以引入你的测试js，或直接写在下面 -->
+<script>mocha.run();  </script> <!--  注意不要漏了这个，在js最后启动mocha -->
+ 
+</body>
+</html>

@@ -1,13 +1,14 @@
 var gulp = require("gulp");
 var webpack = require('webpack');
 var utility = require('gulp-util');
+var runner = require('gulp-run');
 var webpackConfig = require('./webpack.config.js');
 
 var path = {
     nodeRoot : './node_modules/',
     JsRoot : './Scripts/',
-    CssRoot : './CSS/',
-    FontRoot : './fonts/'
+    CssRoot : './Css/',
+    FontRoot : './Font/'
 };
 
 gulp.task('moveJsFiles',function(){
@@ -27,7 +28,9 @@ gulp.task('moveJsFiles',function(){
         path.nodeRoot + 'whatwg-fetch/fetch.js',
         path.nodeRoot + 'babel-polyfill/dist/*.js',
         path.nodeRoot + 'jquery-validation/dist/*.js',
-        path.nodeRoot + 'jquery-validation-unobtrusive/jquery.validation.unobtrusive.js'
+        path.nodeRoot + 'jquery-validation-unobtrusive/jquery.validation.unobtrusive.js',
+        path.nodeRoot + 'mocha/mocha.js',
+        path.nodeRoot + 'chai/chai.js'
     ],{base:path.nodeRoot})
     .pipe(gulp.dest(path.JsRoot+'vendors/'));
 });
@@ -36,7 +39,8 @@ gulp.task('moveCssFiles',function(){
     return gulp.src([
         path.nodeRoot + 'bootstrap/dist/css/bootstrap.css',
         path.nodeRoot + 'font-awesome/css/font-awesome.css',
-        path.nodeRoot + 'toastr/build/*.css'
+        path.nodeRoot + 'toastr/build/*.css',
+        path.nodeRoot + 'mocha/mocha.css'
     ],{base:path.nodeRoot})
     .pipe(gulp.dest(path.CssRoot));
 });
@@ -52,11 +56,15 @@ gulp.task('moveFontsFiles',function(){
 gulp.task("compile:js", function (callback) {
     var myConfig = Object.create(webpackConfig);
 
+    runner('set NODE_ENV=production').exec();
+
     webpack(myConfig, function (err, stats) {
         if (err) throw new utility.PluginError("webpack:build", err);
         utility.log("[webpack:build]", stats.toString({
             colors: true
         }));
-        callback();
     });
+    
+    return gulp.src(['./build/app.js'])
+    .pipe(gulp.dest("../BackEnd/React_Jwt/Build"));
 });
