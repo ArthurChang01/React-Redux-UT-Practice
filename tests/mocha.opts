@@ -1,0 +1,5 @@
+--compilers js:babel-register
+--require jsdom-global/register
+--recursive
+--inline-diffs
+--reporter spec
