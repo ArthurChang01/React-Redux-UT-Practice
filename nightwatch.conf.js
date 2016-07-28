@@ -5,8 +5,8 @@ var nightwatchCucumber = require('nightwatch-cucumber')
 
 var nightwatchCucumberConf = {
     runner: 'nightwatch',
-    featureFiles: 'features',
-    stepDefinitions: 'features',
+    featureFiles: 'test/e2e',
+    stepDefinitions: 'test/e2e',
     closeSession: 'afterFeature'
 }
 

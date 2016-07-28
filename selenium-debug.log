@@ -1,0 +1,308 @@
+19:25:27.173 INFO - Launching a standalone Selenium Server
+19:25:27.222 INFO - Java: Oracle Corporation 25.101-b13
+19:25:27.222 INFO - OS: Windows 10 10.0 amd64
+19:25:27.230 INFO - v2.53.1, with Core v2.53.1. Built from revision a36b8b1
+19:25:27.267 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+19:25:27.268 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+19:25:27.273 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
+19:25:27.273 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
+19:25:27.273 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
+19:25:27.357 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+19:25:27.357 INFO - Selenium Server is up and running
+19:25:28.630 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, phantomjs.binary.path=C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\phantomjs-prebuilt\lib\phantom\bin\phantomjs.exe, name=Login, browserName=phantomjs, javascriptEnabled=true, platform=ANY}]])
+19:25:28.637 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, phantomjs.binary.path=C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\phantomjs-prebuilt\lib\phantom\bin\phantomjs.exe, name=Login, browserName=phantomjs, javascriptEnabled=true, platform=ANY}]
+19:25:28.643 INFO - executable: C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\phantomjs-prebuilt\lib\phantom\bin\phantomjs.exe
+19:25:28.643 INFO - port: 20611
+19:25:28.644 INFO - arguments: [--webdriver=20611, --webdriver-logfile=c:\Users\Arthur Chang\Desktop\React-Redux-Practice\phantomjsdriver.log]
+19:25:28.644 INFO - environment: {}
+[INFO  - 2016-07-28T11:25:30.614Z] GhostDriver - Main - running on port 20611
+[INFO  - 2016-07-28T11:25:30.677Z] Session [fde36210-54b5-11e6-bc48-9b29bdb98f88] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-07-28T11:25:30.677Z] Session [fde36210-54b5-11e6-bc48-9b29bdb98f88] - page.customHeaders:  - {}
+[INFO  - 2016-07-28T11:25:30.677Z] Session [fde36210-54b5-11e6-bc48-9b29bdb98f88] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-07-28T11:25:30.677Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: fde36210-54b5-11e6-bc48-9b29bdb98f88
+19:25:30.699 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, phantomjs.binary.path=C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\phantomjs-prebuilt\lib\phantom\bin\phantomjs.exe, name=Login, browserName=phantomjs, javascriptEnabled=true, platform=ANY}]]
+19:25:30.709 INFO - Executing: [get: http://localhost:8080])
+19:25:33.051 INFO - Done: [get: http://localhost:8080]
+19:25:33.091 INFO - Executing: [find elements: By.cssSelector: body])
+19:25:33.120 INFO - Done: [find elements: By.cssSelector: body]
+19:25:33.125 INFO - Executing: [is displayed: 0 [[PhantomJSDriver: phantomjs on XP (fde36210-54b5-11e6-bc48-9b29bdb98f88)] -> css selector: body]])
+19:25:33.143 INFO - Done: [is displayed: 0 [[PhantomJSDriver: phantomjs on XP (fde36210-54b5-11e6-bc48-9b29bdb98f88)] -> css selector: body]]
+19:25:33.154 INFO - Executing: [find element: By.cssSelector: input[name=name]])
+[ERROR - 2016-07-28T11:25:33.415Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1469705133356
+
+  phantomjs://platform/console++.js:263 in error
+19:25:35.032 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with css selector 'input[name=name]'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"51","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"input[name=name]\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+Command duration or timeout: 291 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=XP, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fde36210-54b5-11e6-bc48-9b29bdb98f88
+*** Element info: {Using=css selector, value=input[name=name]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+	... 19 more
+Caused by: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with css selector 'input[name=name]'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"51","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"input[name=name]\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+19:25:35.060 WARN - Exception: {"errorMessage":"Unable to find element with css selector 'input[name=name]'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"51","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"input[name=name]\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+19:25:35.104 INFO - Executing: [find element: By.cssSelector: input[name=email]])
+[ERROR - 2016-07-28T11:25:35.353Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1469705135307
+
+  phantomjs://platform/console++.js:263 in error
+19:25:35.626 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with css selector 'input[name=email]'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"52","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"input[name=email]\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+Command duration or timeout: 294 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=XP, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fde36210-54b5-11e6-bc48-9b29bdb98f88
+*** Element info: {Using=css selector, value=input[name=email]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+	... 19 more
+Caused by: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with css selector 'input[name=email]'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"52","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"input[name=email]\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+19:25:35.629 WARN - Exception: {"errorMessage":"Unable to find element with css selector 'input[name=email]'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"52","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"input[name=email]\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+19:25:35.664 INFO - Executing: [find element: By.cssSelector: input[name=phone]])
+[ERROR - 2016-07-28T11:25:35.918Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1469705135867
+
+  phantomjs://platform/console++.js:263 in error
+19:25:36.192 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with css selector 'input[name=phone]'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"52","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"input[name=phone]\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+Command duration or timeout: 295 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=XP, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fde36210-54b5-11e6-bc48-9b29bdb98f88
+*** Element info: {Using=css selector, value=input[name=phone]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+	... 19 more
+Caused by: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with css selector 'input[name=phone]'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"52","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"input[name=phone]\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+19:25:36.194 WARN - Exception: {"errorMessage":"Unable to find element with css selector 'input[name=phone]'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"52","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"input[name=phone]\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+19:25:36.224 INFO - Executing: [find element: By.cssSelector: button[type=submit]])
+[ERROR - 2016-07-28T11:25:36.486Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1469705136427
+
+  phantomjs://platform/console++.js:263 in error
+19:25:36.754 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with css selector 'button[type=submit]'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"54","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"button[type=submit]\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+Command duration or timeout: 315 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=XP, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fde36210-54b5-11e6-bc48-9b29bdb98f88
+*** Element info: {Using=css selector, value=button[type=submit]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+	... 19 more
+Caused by: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with css selector 'button[type=submit]'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"54","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"button[type=submit]\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+19:25:36.756 WARN - Exception: {"errorMessage":"Unable to find element with css selector 'button[type=submit]'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"54","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"button[type=submit]\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+19:25:36.774 INFO - Executing: [find element: By.cssSelector: div.alert-success])
+[ERROR - 2016-07-28T11:25:37.027Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1469705136976
+
+  phantomjs://platform/console++.js:263 in error
+19:25:37.312 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with css selector 'div.alert-success'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"52","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"div.alert-success\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+Command duration or timeout: 289 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=XP, browserConnectionEnabled=false, proxy={proxyType=direct}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fde36210-54b5-11e6-bc48-9b29bdb98f88
+*** Element info: {Using=css selector, value=div.alert-success}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy1.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:138)
+	... 19 more
+Caused by: org.openqa.selenium.NoSuchElementException: {"errorMessage":"Unable to find element with css selector 'div.alert-success'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"52","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"div.alert-success\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+19:25:37.314 WARN - Exception: {"errorMessage":"Unable to find element with css selector 'div.alert-success'","request":{"headers":{"Accept-Encoding":"gzip,deflate","Connection":"Keep-Alive","Content-Length":"52","Content-Type":"application/json; charset=utf-8","Host":"localhost:20611","User-Agent":"Apache-HttpClient/4.5.1 (Java/1.8.0_101)"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"div.alert-success\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/fde36210-54b5-11e6-bc48-9b29bdb98f88/element"}}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AFTadmin-PC', ip: '169.254.80.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+19:25:37.356 INFO - Executing: [delete session: 8022dec2-fe4a-4fed-af86-65882b7f74ba])
+[INFO  - 2016-07-28T11:25:37.363Z] ShutdownReqHand - _handle - About to shutdown
+19:25:38.439 INFO - Done: [delete session: 8022dec2-fe4a-4fed-af86-65882b7f74ba]

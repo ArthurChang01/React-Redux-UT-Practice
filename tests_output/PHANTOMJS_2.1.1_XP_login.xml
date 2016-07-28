@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="5"
+            failures="1"
+            tests="5">
+
+  <testsuite name="login"
+    errors="5" failures="1" hostname="" id="" package="login" skipped="4"
+    tests="5" time="9.954" timestamp="Thu, 28 Jul 2016 11:25:27 GMT">
+  
+    <testcase name="假設所填入的註冊資料皆正確，應該可以成功進行註冊" time="9.954" assertions="2">
+
+      <failure message="Testing if element &lt;div.alert-success&gt; is visible. Element could not be located.">    at Object.&lt;anonymous&gt; (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\test\e2e\loginE2E.js:24:21)
+    at next (native)</failure>
+
+    
+    </testcase>
+      <system-err>
+        ERROR: Unable to locate element: &quot;input[name=name]&quot; using: css selector
+    at Object.&lt;anonymous&gt; (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\test\e2e\loginE2E.js:8:14)
+    at Object.run (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\cucumber\lib\cucumber\util\run.js:34:19)
+    at Object.invoke (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\cucumber\lib\cucumber\support_code\step_definition.js:91:21)
+    at Promise (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:218:33)
+    at C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:217:28
+    at next (native)
+    at onFulfilled (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:65:19)
+    at C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:54:5
+    at co (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:50:10)
+    at Object.execute (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:209:12)
+ERROR: Unable to locate element: &quot;input[name=email]&quot; using: css selector
+    at Object.&lt;anonymous&gt; (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\test\e2e\loginE2E.js:12:14)
+    at Object.run (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\cucumber\lib\cucumber\util\run.js:34:19)
+    at Object.invoke (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\cucumber\lib\cucumber\support_code\step_definition.js:91:21)
+    at Promise (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:218:33)
+    at C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:217:28
+    at next (native)
+    at onFulfilled (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:65:19)
+    at C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:54:5
+    at co (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:50:10)
+    at Object.execute (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:209:12)
+ERROR: Unable to locate element: &quot;input[name=phone]&quot; using: css selector
+    at Object.&lt;anonymous&gt; (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\test\e2e\loginE2E.js:16:14)
+    at Object.run (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\cucumber\lib\cucumber\util\run.js:34:19)
+    at Object.invoke (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\cucumber\lib\cucumber\support_code\step_definition.js:91:21)
+    at Promise (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:218:33)
+    at C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:217:28
+    at next (native)
+    at onFulfilled (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:65:19)
+    at C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:54:5
+    at co (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:50:10)
+    at Object.execute (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:209:12)
+ERROR: Unable to locate element: &quot;button[type=submit]&quot; using: css selector
+    at Object.&lt;anonymous&gt; (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\test\e2e\loginE2E.js:20:14)
+    at Object.run (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\cucumber\lib\cucumber\util\run.js:34:19)
+    at Object.invoke (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\cucumber\lib\cucumber\support_code\step_definition.js:91:21)
+    at Promise (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:218:33)
+    at C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:217:28
+    at next (native)
+    at onFulfilled (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:65:19)
+    at C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:54:5
+    at co (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:50:10)
+    at Object.execute (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:209:12)
+ERROR: Unable to locate element: &quot;div.alert-success&quot; using: css selector
+    at command (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\nightwatch\lib\api\assertions\visible.js:42:21)
+    at module.exports.BaseAssertion._scheduleAssertion (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:87:17)
+    at module.exports.BaseAssertion._executeCommand (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:82:17)
+    at AssertionInstance.commandFn [as _commandFn] (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:180:21)
+    at AsyncTree.runCommand (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:154:30)
+    at AsyncTree.runCommand (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:109:27)
+    at AsyncTree.runChildNode (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:114:8)
+    at AsyncTree.walkDown (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:80:10)
+    at AsyncTree.walkUp (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:97:8)
+    at AsyncTree.walkDown (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:90:12)
+      </system-err>
+  
+  
+    
+    <testcase
+      name="沒有填入任何資料，註冊應該失敗">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="沒有填入 Name 欄位，註冊應該失敗">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Email 格式不正確，註冊應該失敗">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Phone 長度太長，註冊應該失敗">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>
