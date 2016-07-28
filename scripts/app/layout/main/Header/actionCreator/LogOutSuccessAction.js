@@ -1,7 +1,10 @@
-import { LOGIN_BEGIN } from '../../../../common/constants/MainConstant';
+import { LOGOUT_SUCCESS } from '../../../../common/constants/MainConstant';
+import * as toastr from 'toastr';
 
-export function LoginRequestAction() {
+export function LogOutSuccessAction() {
+    toastr.success("Logout success!");
+
     return {
-        type: LOGIN_BEGIN
+        type: LOGOUT_SUCCESS
     };
-}   
+}

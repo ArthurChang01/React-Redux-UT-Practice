@@ -1,6 +1,6 @@
-import {LOGOUT_BEGIN} from '../../../../common/constants/MainConstant';
+import { LOGOUT_BEGIN } from '../../../../common/constants/MainConstant';
 
-export function LogOutRequestAction(){
+export function LogOutRequestAction() {
     return {
         type: LOGOUT_BEGIN
     };

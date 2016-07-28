@@ -1,10 +1,11 @@
+import "es6-promise";
+import * as toastr from 'toastr';
+import 'whatwg-fetch';
 import { LOGOUT_BEGIN } from '../../../../common/constants/MainConstant';
+import { LogOutRequestAction } from './LogOutRequestAction';
+import { LogOutSuccessAction } from './LogOutSuccessAction';
+import { LogOutFailAction } from './LogOutFailAction';
 
-export function LogOutRequestAction() {
-    return {
-        type: LOGOUT_BEGIN
-    };
-}
 export function LogOutAsyncAction(username) {
     return dispatch => {
 
@@ -19,6 +20,7 @@ export function LogOutAsyncAction(username) {
         fetch(`http://localhost:3000/Members`, fetch_Parm)
             .then(resp => resp.json())
             .then(data => {
+                console.log(data);
                 dispatch(LogOutSuccessAction());
             })
             .catch(err => {

@@ -5,9 +5,9 @@ import { LOGIN_SUCCESS } from '../../../common/constants/MainConstant';
 
 export function LoginSuccessAction(token, browserHistoryMock, storageMock) {
     let storage = storageMock || window.sessionStorage;
-    let browserHistory = browserHistoryMock || browserHistory;
+    let history = browserHistoryMock || browserHistory;
 
-    browserHistory.push('/');
+    history.push('/');
     toastr.success('LogIn successfully!');
     storage.setItem("auth_token", token);
 
