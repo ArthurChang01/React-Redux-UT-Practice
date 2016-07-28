@@ -3,10 +3,13 @@ import * as toastr from 'toastr';
 
 import { LOGIN_SUCCESS } from '../../../common/constants/MainConstant';
 
-export function LoginSuccessAction(token) {
+export function LoginSuccessAction(token, browserHistoryMock, storageMock) {
+    let storage = storageMock || window.sessionStorage;
+    let browserHistory = browserHistoryMock || browserHistory;
+
     browserHistory.push('/');
     toastr.success('LogIn successfully!');
-    sessionStorage.setItem("auth_token", token);
+    storage.setItem("auth_token", token);
 
     return {
         type: LOGIN_SUCCESS,

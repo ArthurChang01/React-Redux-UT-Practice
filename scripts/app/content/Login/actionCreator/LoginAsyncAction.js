@@ -1,12 +1,14 @@
 import "es6-promise";
-import "fetch";
 import * as toastr from 'toastr';
+import 'whatwg-fetch';
 import { LoginRequestAction } from './LoginRequestAction';
 import { LoginSuccessAction } from './LoginSuccessAction';
 import { LoginFailAction } from './LoginFailAction';
 
-export function LoginAsyncAction(username, password) {
+export function LoginAsyncAction(username, password, api, browserHistory, storage) {
     return dispatch => {
+        let fetch = api || window.fetch;
+
         if (!username || !password) {
             toastr.error("username or password can't be empty!");
             return;
@@ -20,9 +22,9 @@ export function LoginAsyncAction(username, password) {
             mode: 'cors'
         };
 
-        fetch(`http://localhost:3000/Members?email=${username}&password=${password}`, fetch_Parm)
+        return fetch(`http://localhost:3000/Members?email=${username}&password=${password}`, fetch_Parm)
             .then(resp => resp.json())
-            .then(data => dispatch(LoginSuccessAction(data)))
+            .then(data => dispatch(LoginSuccessAction(data, browserHistory, storage)))
             .catch(err => {
                 dispatch(LoginFailAction(err));
             });
