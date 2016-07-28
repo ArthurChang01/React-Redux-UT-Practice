@@ -1,6 +1,6 @@
 import * as toastr from 'toastr';
 
-import { REGISTER_SUCCESS } from '../../../constants/MainConstant';
+import { REGISTER_SUCCESS } from '../../../common/constants/MainConstant';
 
 export function RegisterSuccessAction(err_msg) {
     toastr.error(err_msg, "Register success!");

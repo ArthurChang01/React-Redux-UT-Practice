@@ -1,4 +1,4 @@
-import { LOGIN_BEGIN } from '../../../constants/MainConstant';
+import { LOGIN_BEGIN } from '../../../common/constants/MainConstant';
 
 export function LoginRequestAction() {
     return {

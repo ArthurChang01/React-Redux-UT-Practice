@@ -15,8 +15,8 @@ import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
-import {MainReducer} from './reducers/MainReducer';
-import InitialState from './InitialState';
+import {MainReducer} from './common/reducers/MainReducer';
+import InitialState from './common/InitialState';
 import {routerConfig} from './app.router.js';
 
 const store = createStore(

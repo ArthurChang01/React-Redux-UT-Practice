@@ -1,10 +1,10 @@
-import "es6-promise";
-import "fetch";
-import * as toastr from 'toastr';
-import { LogOutRequestAction } from './LogOutRequestAction';
-import { LogOutSuccessAction } from './LogOutSuccessAction';
-import { LogOutFailAction } from './LogOutFailAction';
+import { LOGOUT_BEGIN } from '../../../../common/constants/MainConstant';
 
+export function LogOutRequestAction() {
+    return {
+        type: LOGOUT_BEGIN
+    };
+}
 export function LogOutAsyncAction(username) {
     return dispatch => {
 

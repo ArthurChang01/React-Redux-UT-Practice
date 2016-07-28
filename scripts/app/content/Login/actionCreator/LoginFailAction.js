@@ -1,6 +1,6 @@
 import * as toastr from 'toastr';
 
-import { LOGIN_FAIL } from '../../../constants/MainConstant';
+import { LOGIN_FAIL } from '../../../common/constants/MainConstant';
 
 export function LoginFailAction(err_msg) {
     toastr.error(err_msg, "Login fail!");

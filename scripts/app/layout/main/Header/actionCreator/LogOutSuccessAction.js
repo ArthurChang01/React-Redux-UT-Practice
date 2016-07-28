@@ -1,14 +1,7 @@
-import { browserHistory } from 'react-router';
-import * as toastr from 'toastr';
+import { LOGIN_BEGIN } from '../../../../common/constants/MainConstant';
 
-import { LOGOUT_SUCCESS } from '../../../../constants/MainConstant';
-
-export function LogOutSuccessAction() {
-    browserHistory.push('/');
-    toastr.success('LogOut successfully!');
-    sessionStorage.setItem("auth_token", null);
-
+export function LoginRequestAction() {
     return {
-        type: LOGOUT_SUCCESS
+        type: LOGIN_BEGIN
     };
-}
+}   

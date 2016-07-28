@@ -1,7 +1,7 @@
 import { browserHistory } from 'react-router';
 import * as toastr from 'toastr';
 
-import { LOGIN_SUCCESS } from '../../../constants/MainConstant';
+import { LOGIN_SUCCESS } from '../../../common/constants/MainConstant';
 
 export function LoginSuccessAction(token) {
     browserHistory.push('/');
