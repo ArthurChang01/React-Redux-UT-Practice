@@ -43,7 +43,6 @@ HeaderComponent.propTypes={
 
 //for connect
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
         isAuth: state? state.isAuth : false,
         name: state? state.name : ''
@@ -54,7 +53,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         LogOut: () => {
-            //dispatch(LogOutAsyncAction());
+            dispatch(LogOutAsyncAction());
         }
     };
 };

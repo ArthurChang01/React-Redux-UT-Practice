@@ -1,6 +1,6 @@
 import "jquery-validation";
 
-const Validator = function Validator(rules, messages) {
+export default function Validator(rules, messages) {
     if (!rules)
         console.log("rules can't be empty!");
 
@@ -30,5 +30,3 @@ const Validator = function Validator(rules, messages) {
 
     $('form').validate(config);
 }
-
-export default Validator;

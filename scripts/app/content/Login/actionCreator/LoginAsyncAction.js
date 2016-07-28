@@ -14,14 +14,15 @@ export function LoginAsyncAction(username, password) {
 
         dispatch(LoginRequestAction());
 
-        fetch(`http://localhost:3000/Members?email=${email}&password=${password}`, fetch_Parm)
+        let fetch_Parm = {
+            headers: { "Content-Type": 'application/json' },
+            method: 'GET',
+            mode: 'cors'
+        };
+
+        fetch(`http://localhost:3000/Members?email=${username}&password=${password}`, fetch_Parm)
             .then(resp => resp.json())
-            .then(data => {
-                if (data.length == 0)
-                    dispatch(LoginFailAction('email or password is not matched'));
-                else
-                    dispatch(LoginSuccessAction(data));
-            })
+            .then(data => dispatch(LoginSuccessAction(data)))
             .catch(err => {
                 dispatch(LoginFailAction(err));
             });

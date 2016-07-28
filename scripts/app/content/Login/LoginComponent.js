@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router';
 
 import {LoginAsyncAction} from './actionCreator/LoginAsyncAction';
-import {Validator} from '../../common/Validator';
+import Validator from '../../common/Validator';
 
 //Component: LoginComponent
 export class LoginComponent extends Component {

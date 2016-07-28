@@ -5,26 +5,24 @@ import { LogOutRequestAction } from './LogOutRequestAction';
 import { LogOutSuccessAction } from './LogOutSuccessAction';
 import { LogOutFailAction } from './LogOutFailAction';
 
-export function LogOutAsyncAction() {
+export function LogOutAsyncAction(username) {
     return dispatch => {
 
         dispatch(LogOutRequestAction());
 
         let fetch_Parm = {
             headers: { "Content-Type": 'application/json' },
-            method: 'POST',
-            mode: 'cors',
-            body: JSON.stringify({ email: email, "password": password })
+            method: 'GET',
+            mode: 'cors'
         };
 
-        fetch('http://localhost:3000/Members', fetch_Parm)
+        fetch(`http://localhost:3000/Members`, fetch_Parm)
             .then(resp => resp.json())
             .then(data => {
-                dispatch(RegisterSuccessAction(data));
-                dispatch(LoginAsyncAction(email, password));
+                dispatch(LogOutSuccessAction());
             })
             .catch(err => {
-                dispatch(RegisterFailAction(err));
+                dispatch(LogOutFailAction(err));
             });
     }
 }
