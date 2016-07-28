@@ -17,10 +17,10 @@ module.exports = {
     page_objects_path: '',
     live_output: false,
     disable_colors: false,
-    // test_workers: {
-    //  enabled: true,
-    //  workers: 'auto'
-    // },
+    //test_workers: {
+    //enabled: true,
+    //workers: 'auto'
+    //},
 
     selenium: {
         start_process: true,
@@ -31,12 +31,12 @@ module.exports = {
 
     test_settings: {
         default: {
-            launch_url: 'http://localhost',
+            launch_url: 'http://localhost:8080',
             selenium_port: 4444,
             selenium_host: 'localhost',
             silent: true,
             desiredCapabilities: {
-                browserName: 'phantomjs',
+                browserName: 'chrome',
                 javascriptEnabled: true,
                 acceptSslCerts: true,
                 'phantomjs.binary.path': phantomjs.path

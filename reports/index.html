@@ -114,7 +114,7 @@ div.chart div div svg rect {
             <span class="label-container">
               
               <span class="label label-danger">1</span>
-              
+              <span class="label label-info">1</span>
               
             </span>
           </a>
@@ -131,8 +131,8 @@ div.chart div div svg rect {
                     <i class="glyphicon glyphicon-chevron-down"></i>
                     <b>Scenario:</b>假設所填入的註冊資料皆正確，應該可以成功進行註冊
                     <span class="label-container">
-                      <span class="label label-success" title="Passed">5</span>
-                      
+                      <span class="label label-success" title="Passed">3</span>
+                      <span class="label label-info" title="Undefined">1</span>
                       
                       <span class="label label-danger" title="Failed">1</span>
                     </span>
@@ -141,6 +141,67 @@ div.chart div div svg rect {
               </div>
               <div id="collapseScenario00" class="panel-collapse collapse">
                 <div class="panel-body">
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-primary" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
+                      
+                    
+                      <span class="text"><span class="keyword highlight">並且</span> Password 欄位填入 "1234"</span>
+                    
+                      
+                        <pre>
+this.Then(/^Password 欄位填入 "([^"]*)"$/, function(arg1, callback) {
+  callback.pending();
+});
+                        </pre>
+                      
+
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
+                  
+                    <p class="scenario-container">
+                    
+                      
+                        <span class="label label-danger" title="Failed"><i class="glyphicon glyphicon-remove"></i></span>
+                      
+                    
+                      <span class="text"><span class="keyword highlight">那麼</span> 應該成功回到首頁網址 "http://localhost:8080"</span>
+                    
+                      
+
+                      
+                        <a href="#error001" data-toggle="collapse">+ Show Error</a>
+                        <div id="error001" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <pre>TypeError: this.urlEquals is not a function
+    at Object.<anonymous> (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\test\e2e\loginE2E.js:22:14)
+    at Object.run (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\cucumber\lib\cucumber\util\run.js:34:19)
+    at Object.invoke (C:\Users\Arthur Chang\AppData\Roaming\npm\node_modules\cucumber\lib\cucumber\support_code\step_definition.js:91:21)
+    at Promise (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:218:33)
+    at C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:217:28
+    at next (native)
+    at onFulfilled (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:65:19)
+    at C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:54:5
+    at co (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\node_modules\co\index.js:50:10)
+    at Object.execute (C:\Users\Arthur Chang\Desktop\React-Redux-Practice\node_modules\nightwatch-cucumber\lib\nightwatch-runner.js:209:12)</pre>
+                          </div>
+                        </div>
+                      
+
+                      
+
+                       
+
+                    
+                    </p>
                   
                     <p class="scenario-container">
                     
@@ -167,7 +228,7 @@ div.chart div div svg rect {
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
                       
                     
-                      <span class="text"><span class="keyword highlight">假設</span> Name 欄位填入 "John"</span>
+                      <span class="text"><span class="keyword highlight">假設</span> Name 欄位填入 "api.test01"</span>
                     
                       
 
@@ -186,7 +247,7 @@ div.chart div div svg rect {
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
                       
                     
-                      <span class="text"><span class="keyword highlight">並且</span> Email 欄位填入 "john@skilltree.com"</span>
+                      <span class="text"><span class="keyword highlight">當</span> 按下送出按鈕</span>
                     
                       
 
@@ -199,13 +260,36 @@ div.chart div div svg rect {
                     
                     </p>
                   
+                </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#collapseScenario01">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <i class="glyphicon glyphicon-chevron-down"></i>
+                    <b>Scenario:</b>沒有填入任何資料，註冊應該失敗
+                    <span class="label-container">
+                      <span class="label label-success" title="Passed">2</span>
+                      
+                      
+                      <span class="label label-danger" title="Failed">1</span>
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseScenario01" class="panel-collapse collapse">
+                <div class="panel-body">
+                  
                     <p class="scenario-container">
                     
                       
                         <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
                       
                     
-                      <span class="text"><span class="keyword highlight">並且</span> Phone 欄位填入 "0912345678"</span>
+                      <span class="text"><span class="keyword highlight">假設</span> 開啟瀏覽器，打開 "http://localhost:8080" 頁面</span>
                     
                       
 
@@ -243,15 +327,15 @@ div.chart div div svg rect {
                         <span class="label label-danger" title="Failed"><i class="glyphicon glyphicon-remove"></i></span>
                       
                     
-                      <span class="text"><span class="keyword highlight">那麼</span> 應該成功送出</span>
+                      <span class="text"><span class="keyword highlight">那麼</span> 應該送出失敗</span>
                     
                       
 
                       
-                        <a href="#error005" data-toggle="collapse">+ Show Error</a>
-                        <div id="error005" class="panel-collapse collapse">
+                        <a href="#error012" data-toggle="collapse">+ Show Error</a>
+                        <div id="error012" class="panel-collapse collapse">
                           <div class="panel-body">
-                            <pre>Testing if element <div.alert-success> is visible. Element could not be located.
+                            <pre>Testing if element <div.alert-danger> is visible. Element could not be located.
 undefined</pre>
                           </div>
                         </div>
@@ -296,7 +380,7 @@ undefined</pre>
                                                             "title" : "Scenarios",
                                                             "failed" : 1,
                                                             "passed" : 0,
-                                                            "notdefined" : 0,
+                                                            "notdefined" : 1,
                                                             "skipped" : 0
                                                         })
                                             });
