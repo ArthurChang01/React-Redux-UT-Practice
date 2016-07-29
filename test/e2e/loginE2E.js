@@ -6,19 +6,18 @@ module.exports = function() {
     });
 
     this.Given(/^Name 欄位填入 "([^"]*)"$/, function(name) {
-        this.setValue('input[name=username]', name);
+        this.setValue('input[name=username]', name).pause(3000);
     });
 
-    this.Given(/^Phone 欄位填入 "([^"]*)"$/, function(password) {
-        this.setValue('input[name=password]', password);
+    this.Given(/^Password 欄位填入 "([^"]*)"$/, function(password) {
+        this.setValue('input[name=password]', password).pause(2000);
     });
 
     this.When(/^按下送出按鈕$/, function() {
-        this.click('input[type=submit]');
+        this.click('input[type=submit]').pause(5000);
     });
 
     this.Then(/^應該成功回到首頁網址 "([^"]*)"$/, function(url) {
-        //this.assert.equal('div.alert-success');
-        this.urlEquals("http://localhost:8080", url);
+        this.assert.containsText("a[title=Manage]", "Hello ");
     });
 }
