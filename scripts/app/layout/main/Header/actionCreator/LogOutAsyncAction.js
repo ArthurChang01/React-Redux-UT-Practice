@@ -1,6 +1,6 @@
 import "es6-promise";
+import "whatwg-fetch";
 import * as toastr from 'toastr';
-import 'whatwg-fetch';
 import { LOGOUT_BEGIN } from '../../../../common/constants/MainConstant';
 import { LogOutRequestAction } from './LogOutRequestAction';
 import { LogOutSuccessAction } from './LogOutSuccessAction';

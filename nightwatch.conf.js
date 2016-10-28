@@ -30,7 +30,7 @@ module.exports = {
     },
 
     test_settings: {
-        default: {
+        phantomjs: {
             launch_url: 'http://localhost:8080',
             selenium_port: 4444,
             selenium_host: 'localhost',
@@ -43,7 +43,7 @@ module.exports = {
             }
         },
 
-        chrome: {
+        default: {
             desiredCapabilities: {
                 browserName: 'chrome',
                 javascriptEnabled: true,

@@ -1,6 +1,6 @@
 import "es6-promise";
+import "whatwg-fetch";
 import * as toastr from 'toastr';
-import 'whatwg-fetch';
 import { LoginRequestAction } from './LoginRequestAction';
 import { LoginSuccessAction } from './LoginSuccessAction';
 import { LoginFailAction } from './LoginFailAction';

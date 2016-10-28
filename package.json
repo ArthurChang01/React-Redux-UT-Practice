@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test2":"nyc --reporter=lcov --require babel-core/register _mocha && start coverage/lcov-report/index.html",
-    "test": "gulp test && start coverage/lcov-report/index.html",
+    "test": "nyc --reporter=lcov --require babel-core/register _mocha && start coverage/lcov-report/index.html",
+    "e2e": "nightwatch",
     "server": "json-server --watch db.json",
     "build": "webpack-dev-server --devtool eval --progress --colors --hot --content-base .",
-    "start": "node ./node_modules/concurrently/src/main.js --kill-others \"npm run server\" \"npm run build\"",
+    "start": "node ./node_modules/concurrently/src/main.js --kill-others \"npm run server\" \"npm run build\" ",
     "deploy": "webpack -p --config webpack.config.js"
   },
   "author": "",
@@ -29,7 +29,8 @@
     "react-router": "^2.4.1",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
-    "toastr": "^2.1.2"
+    "toastr": "^2.1.2",
+    "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
@@ -49,7 +50,6 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "gulp": "^3.9.1",
-    "gulp-jsx-coverage": "^0.3.8",
     "gulp-run": "^1.6.12",
     "gulp-util": "^3.0.7",
     "isparta": "^4.0.0",

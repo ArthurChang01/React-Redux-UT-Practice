@@ -1,0 +1,88 @@
+[
+  {
+    "description": "    提供使用者註冊",
+    "elements": [
+      {
+        "id": "註冊;假設所填入的註冊資料皆正確，應該可以成功進行註冊",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "假設所填入的註冊資料皆正確，應該可以成功進行註冊",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "name": "開啟瀏覽器，打開 \"http://localhost:8080\" 頁面",
+            "result": {
+              "status": "passed",
+              "duration": 2715262837
+            },
+            "line": 6,
+            "match": {
+              "location": "C:\\Users\\a8022\\Desktop\\React-Redux-UT-Practice\\test\\e2e\\loginE2E.js:2"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "假設",
+            "name": "Name 欄位填入 \"api.test01\"",
+            "result": {
+              "status": "passed",
+              "duration": 3084386446
+            },
+            "line": 9,
+            "match": {
+              "location": "C:\\Users\\a8022\\Desktop\\React-Redux-UT-Practice\\test\\e2e\\loginE2E.js:8"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "並且",
+            "name": "Password 欄位填入 \"1234\"",
+            "result": {
+              "status": "passed",
+              "duration": 2079960370
+            },
+            "line": 10,
+            "match": {
+              "location": "C:\\Users\\a8022\\Desktop\\React-Redux-UT-Practice\\test\\e2e\\loginE2E.js:12"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "當",
+            "name": "按下送出按鈕",
+            "result": {
+              "status": "passed",
+              "duration": 5121775345
+            },
+            "line": 11,
+            "match": {
+              "location": "C:\\Users\\a8022\\Desktop\\React-Redux-UT-Practice\\test\\e2e\\loginE2E.js:16"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "那麼",
+            "name": "應該成功回到首頁網址 \"http://localhost:8080\"",
+            "result": {
+              "status": "passed",
+              "duration": 53851595
+            },
+            "line": 12,
+            "match": {
+              "location": "C:\\Users\\a8022\\Desktop\\React-Redux-UT-Practice\\test\\e2e\\loginE2E.js:20"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "註冊",
+    "keyword": "功能",
+    "line": 2,
+    "name": "註冊",
+    "tags": [],
+    "uri": "test/e2e/login.feature"
+  }
+]
