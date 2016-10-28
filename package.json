@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test2":"nyc --reporter=lcov --require babel-core/register _mocha && start coverage/lcov-report/index.html",
     "test": "gulp test && start coverage/lcov-report/index.html",
     "server": "json-server --watch db.json",
     "build": "webpack-dev-server --devtool eval --progress --colors --hot --content-base .",
@@ -60,6 +61,7 @@
     "nightwatch": "^0.9.5",
     "nightwatch-cucumber": "^4.0.0",
     "nock": "^8.0.0",
+    "nyc": "^8.3.2",
     "phantomjs-prebuilt": "^2.1.8",
     "react-css-modules": "^3.7.6",
     "react-transform-hmr": "^1.0.4",

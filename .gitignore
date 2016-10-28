@@ -1,3 +1,9 @@
 node_modules/*
 build/*
 coverage/*
+.nyc_output/*
+tests_output/*
+
+npm-debug.log.*
+selenium-debug.log
+yarn.lock
